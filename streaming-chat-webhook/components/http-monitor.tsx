@@ -183,7 +183,7 @@ export function HttpMonitor({ logs, onClose, onClear }: HttpMonitorProps) {
                         </div>
                       )}
                       
-                      {log.body && (
+                      {log.body !== undefined && log.body !== null && (
                         <div>
                           <h4 className="text-xs font-semibold mb-2">
                             {log.type === 'request' ? 'Request Body:' : 'Response Body:'}
